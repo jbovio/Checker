@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>checker package &mdash; Checker 1.0.00 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="checker" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Checker
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="setproject.html">Set new project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="existschecker.html">Checker list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modelchecker.html">Model checker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userinterface.html">Graphic interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">checker</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">checker package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.addnewbutton">addnewbutton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.checkbutton">checkbutton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.checker">checker module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.launcher">launcher module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.lookdev">checker.lookdev module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.model">checker.model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.projectlist">checker.projectlist module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.ui">checker.ui module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Checker</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">checker</a> &raquo;</li>
+      <li>checker package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/doc/checker.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="checker-package">
+<h1>checker package<a class="headerlink" href="#checker-package" title="Permalink to this headline"></a></h1>
+<section id="module-checker.addnewbutton">
+<span id="addnewbutton-module"></span><h2>addnewbutton module<a class="headerlink" href="#module-checker.addnewbutton" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.addnewbutton.AddBtn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.addnewbutton.</span></span><span class="sig-name descname"><span class="pre">AddBtn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.addnewbutton.AddBtn" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QPushButton</span></code></p>
+<p>This class create buttons that execute the different functions that exist in the checker class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.addnewbutton.AddBtn.btnFunction">
+<span class="sig-name descname"><span class="pre">btnFunction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.addnewbutton.AddBtn.btnFunction" title="Permalink to this definition"></a></dt>
+<dd><p>Execute the checker function based on id_str key name and pass arguemtns.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="checker.addnewbutton.AddBtn.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#checker.addnewbutton.AddBtn.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.checkbutton">
+<span id="checkbutton-module"></span><h2>checkbutton module<a class="headerlink" href="#module-checker.checkbutton" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.checkbutton.</span></span><span class="sig-name descname"><span class="pre">ItemWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainTable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.addFixBtn">
+<span class="sig-name descname"><span class="pre">addFixBtn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkSufix=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label=''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.addFixBtn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.assigneCheck">
+<span class="sig-name descname"><span class="pre">assigneCheck</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.assigneCheck" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.getChecker">
+<span class="sig-name descname"><span class="pre">getChecker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.getChecker" title="Permalink to this definition"></a></dt>
+<dd><p>Query checker key name from main table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>row</strong> – [int], row index from main table.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[ checker key name from main table column 0 ]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.getRow">
+<span class="sig-name descname"><span class="pre">getRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.getRow" title="Permalink to this definition"></a></dt>
+<dd><p>Query table row by text.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.ledColor">
+<span class="sig-name descname"><span class="pre">ledColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.ledColor" title="Permalink to this definition"></a></dt>
+<dd><p>Set color code icon and add it to the cell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> – (int) 1 green ok, 2 red error, 3 orange warning</p></li>
+<li><p><strong>row</strong> – (int) row index.</p></li>
+<li><p><strong>table</strong> – QtableWidget.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.remvoeExtraButtons">
+<span class="sig-name descname"><span class="pre">remvoeExtraButtons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.remvoeExtraButtons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.runChecker">
+<span class="sig-name descname"><span class="pre">runChecker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkerName=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.runChecker" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.setNote">
+<span class="sig-name descname"><span class="pre">setNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">note=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.setNote" title="Permalink to this definition"></a></dt>
+<dd><p>Set table note</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>note</strong> – (str) text note to display in interface column.</p></li>
+<li><p><strong>row</strong> – (int) row index.</p></li>
+<li><p><strong>table</strong> – QtableWidget.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#checker.checkbutton.ItemWidget.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.checker">
+<span id="checker-module"></span><h2>checker module<a class="headerlink" href="#module-checker.checker" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.checker.Checker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.checker.</span></span><span class="sig-name descname"><span class="pre">Checker</span></span><a class="headerlink" href="#checker.checker.Checker" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checker.Checker.checkList">
+<span class="sig-name descname"><span class="pre">checkList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checker.Checker.checkList" title="Permalink to this definition"></a></dt>
+<dd><p>Contains a checker dictonary by department.</p>
+<dl class="simple">
+<dt>sufix “_check”: Refers to the method who return the results(Dic)</dt><dd><p>results = {‘state’: None, ‘note’: note, ‘fixBtn’: None, ‘extraBtn’: None }</p>
+</dd>
+</dl>
+<p>sufix “_fix”: Refers to the method that corrects the error.</p>
+<p>sufix “_extra”: Refers to the exclusive method for the checker.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">state</dt>
+<dd class="field-odd"><p>(int)  1 True , 2 False, 3 Warning.</p>
+</dd>
+<dt class="field-even">note</dt>
+<dd class="field-even"><p>(str) Description, commnet, general information to display in UI column.</p>
+</dd>
+<dt class="field-odd">fixBtn</dt>
+<dd class="field-odd"><p>(bool) Method to correct the error.</p>
+</dd>
+<dt class="field-even">extraBtn</dt>
+<dd class="field-even"><p>( [ bool, str ] ) [ Add an extra function if the method returns false, button lable ]</p>
+</dd>
+</dl>
+<p># Checker example.
+‘keyName’ : ‘keyName_check’,  # Actual checker
+‘keyName_fix’ : ‘keyName_fix’, # Solution
+‘keyName_extra’ : ‘keyName_select’, # Select checked nodes</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>check</strong> – (str) key name to idicate the method.</p></li>
+<li><p><strong>args</strong> – project-specific arguments</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>method( args )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checker.Checker.null">
+<span class="sig-name descname"><span class="pre">null</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checker.Checker.null" title="Permalink to this definition"></a></dt>
+<dd><p>When checker is not listed or exist return a null fucntion and warning.
+:return: { state: None,  note: warning, fixBtn: None, extraBtn: None }</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.launcher">
+<span id="launcher-module"></span><h2>launcher module<a class="headerlink" href="#module-checker.launcher" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-checker.lookdev">
+<span id="checker-lookdev-module"></span><h2>checker.lookdev module<a class="headerlink" href="#module-checker.lookdev" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.lookdev.</span></span><span class="sig-name descname"><span class="pre">Lookdev</span></span><a class="headerlink" href="#checker.lookdev.Lookdev" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.clearDeformers_check">
+<span class="sig-name descname"><span class="pre">clearDeformers_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.clearDeformers_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check for type of deformers exist in scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+<li><p><strong>deformerType</strong> – args[0][1] , Type of deformers to check for.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.clearDeformers_fix">
+<span class="sig-name descname"><span class="pre">clearDeformers_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.clearDeformers_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Turn off deformer envelope and delete it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.clearDeformers_select">
+<span class="sig-name descname"><span class="pre">clearDeformers_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.clearDeformers_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects with defined deformers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.defaultMaterialType">
+<span class="sig-name descname"><span class="pre">defaultMaterialType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.defaultMaterialType" title="Permalink to this definition"></a></dt>
+<dd><p>This function collect all the materials and filter by type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>matType</strong> – Defined default material.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Materials who no are the default type.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.defaultMaterialType_check">
+<span class="sig-name descname"><span class="pre">defaultMaterialType_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.defaultMaterialType_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check for the default type material in scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+<li><p><strong>matType</strong> – args[0][1], material default type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.defaultMaterialType_select">
+<span class="sig-name descname"><span class="pre">defaultMaterialType_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.defaultMaterialType_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select materials who does not match the default type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.delNonDeformHistory_check">
+<span class="sig-name descname"><span class="pre">delNonDeformHistory_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.delNonDeformHistory_check" title="Permalink to this definition"></a></dt>
+<dd><p>Bake all “NonDefHistory”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.deleteUnusedNode_check">
+<span class="sig-name descname"><span class="pre">deleteUnusedNode_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.deleteUnusedNode_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check if there unused nodes in scene, and delete unused nodes.
+undo: available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.disconnectInitialSG">
+<span class="sig-name descname"><span class="pre">disconnectInitialSG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.disconnectInitialSG" title="Permalink to this definition"></a></dt>
+<dd><p>Disconect initial shading group from mesh in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.faceWithoutMaterial">
+<span class="sig-name descname"><span class="pre">faceWithoutMaterial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.faceWithoutMaterial" title="Permalink to this definition"></a></dt>
+<dd><p>This function looks for face component who don’t have a material assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>component faces</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.faceWithoutMaterial_check">
+<span class="sig-name descname"><span class="pre">faceWithoutMaterial_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.faceWithoutMaterial_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check if there component face without material or shading group assigned.
+undo: available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.faceWithoutMaterial_select">
+<span class="sig-name descname"><span class="pre">faceWithoutMaterial_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.faceWithoutMaterial_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select faces without assigned material.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.facesWithoutSG">
+<span class="sig-name descname"><span class="pre">facesWithoutSG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.facesWithoutSG" title="Permalink to this definition"></a></dt>
+<dd><p>This function looks for face component who don’t have a shading group assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>component faces</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.flagGeoWithTransform">
+<span class="sig-name descname"><span class="pre">flagGeoWithTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.flagGeoWithTransform" title="Permalink to this definition"></a></dt>
+<dd><p>List all objects if the object have transform flagged with “orange” color in outliner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of objects with transfroms.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.flagGeoWithTransform_check">
+<span class="sig-name descname"><span class="pre">flagGeoWithTransform_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.flagGeoWithTransform_check" title="Permalink to this definition"></a></dt>
+<dd><p>Flag DAG objects who have transforms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.flagGeoWithTransform_select">
+<span class="sig-name descname"><span class="pre">flagGeoWithTransform_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.flagGeoWithTransform_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects with transforms.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.flagObjWithDeformHistory">
+<span class="sig-name descname"><span class="pre">flagObjWithDeformHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.flagObjWithDeformHistory" title="Permalink to this definition"></a></dt>
+<dd><p>Flag objects with deform history.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of objects who have history.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.flagObjWithDeformHistory_check">
+<span class="sig-name descname"><span class="pre">flagObjWithDeformHistory_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.flagObjWithDeformHistory_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check for objects who have history.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.flagObjWithDeformHistory_select">
+<span class="sig-name descname"><span class="pre">flagObjWithDeformHistory_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.flagObjWithDeformHistory_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects whit deform history.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.listDeformers">
+<span class="sig-name descname"><span class="pre">listDeformers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.listDeformers" title="Permalink to this definition"></a></dt>
+<dd><p>Lists all requested deformers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( <a href="#id1"><span class="problematic" id="id2">*</span></a>, [ priority, deformers type ] )</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of deformers names in scene.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.listMaterials">
+<span class="sig-name descname"><span class="pre">listMaterials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.listMaterials" title="Permalink to this definition"></a></dt>
+<dd><p>List materials in scene without the correct prefix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prefix</strong> – str</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of meterials in scene</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.materialPrefix_check">
+<span class="sig-name descname"><span class="pre">materialPrefix_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.materialPrefix_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check for materials withou the correct name prefix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+<li><p><strong>prefix</strong> – args[0][1]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.materialPrefix_fix">
+<span class="sig-name descname"><span class="pre">materialPrefix_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.materialPrefix_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Rename materials nodes and add prefix.
+undo: available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prefix</strong> – args[0][1] str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.materialPrefix_select">
+<span class="sig-name descname"><span class="pre">materialPrefix_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.materialPrefix_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select materials without the correct prefix.
+:param prefix: args[0][1]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.multipleUVSet_check">
+<span class="sig-name descname"><span class="pre">multipleUVSet_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.multipleUVSet_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check for objects with multiple uv sets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.multipleUVSet_select">
+<span class="sig-name descname"><span class="pre">multipleUVSet_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.multipleUVSet_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objecst with multiple uv sets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.uvSetName">
+<span class="sig-name descname"><span class="pre">uvSetName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.uvSetName" title="Permalink to this definition"></a></dt>
+<dd><p>Identify objects with more the one uv sets and incorrect named uv set
+:return: list of objects with more then one uv set and incorrect named default uv set.
+:rtype: [ string[], string[] ]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.uvSetName_check">
+<span class="sig-name descname"><span class="pre">uvSetName_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.uvSetName_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check objects uv sets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.uvSetName_fix">
+<span class="sig-name descname"><span class="pre">uvSetName_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.uvSetName_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Rename default uv set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.uvSetName_select">
+<span class="sig-name descname"><span class="pre">uvSetName_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.uvSetName_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects with incorrect default uv set name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.model">
+<span id="checker-model-module"></span><h2>checker.model module<a class="headerlink" href="#module-checker.model" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.model.Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#checker.model.Model" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.allQuads_check">
+<span class="sig-name descname"><span class="pre">allQuads_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.allQuads_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there noQuads face components in the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.allQuads_select">
+<span class="sig-name descname"><span class="pre">allQuads_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.allQuads_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all face components in scene that not have 4 sides.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.assemblyHierarchy">
+<span class="sig-name descname"><span class="pre">assemblyHierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assetName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.assemblyHierarchy" title="Permalink to this definition"></a></dt>
+<dd><p>Collect all objects that are not under the main asset group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of assemblies dag objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.assetGroup">
+<span class="sig-name descname"><span class="pre">assetGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assetName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sufix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_GRP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.assetGroup" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the asset main group exists if it does not create it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>transform node name.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.checkFistUppercase">
+<span class="sig-name descname"><span class="pre">checkFistUppercase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.checkFistUppercase" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the listed nodes starts with uppercase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nodes</strong> – list of nodes to check uppercase:</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>objects who dont start with uppercase</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PyNode[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.checkFistUppercase_fix">
+<span class="sig-name descname"><span class="pre">checkFistUppercase_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.checkFistUppercase_fix" title="Permalink to this definition"></a></dt>
+<dd><p>This function capitalize objects name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nodes</strong> – list of nodes outside of naming conventions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.checkGroupSufix">
+<span class="sig-name descname"><span class="pre">checkGroupSufix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sufix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_GRP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.checkGroupSufix" title="Permalink to this definition"></a></dt>
+<dd><p>Query objects who do not end with the correct sufix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> – PyNode object list to check sufix.</p></li>
+<li><p><strong>sufix</strong> – Defined sufix. ( default “_GRP” )</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>objects who do not end with sufix.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PyNode[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.checkGroupSufix_fix">
+<span class="sig-name descname"><span class="pre">checkGroupSufix_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sufix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_GRP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.checkGroupSufix_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Fix group name adding sufix.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.checkUpperCase">
+<span class="sig-name descname"><span class="pre">checkUpperCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.checkUpperCase" title="Permalink to this definition"></a></dt>
+<dd><p>This function check if after every underscore the next string is uppercase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nodes</strong> – list of nodes outside of naming conventions.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>PyNode object list who do not match the name conventions.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PyNode[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.checkUpperCase_fix">
+<span class="sig-name descname"><span class="pre">checkUpperCase_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.checkUpperCase_fix" title="Permalink to this definition"></a></dt>
+<dd><p>This function convert every character after underscore to an uppercase.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nodes</strong> – List of nodes outside of naming conventions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteCustomeCameras_check">
+<span class="sig-name descname"><span class="pre">deleteCustomeCameras_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteCustomeCameras_check" title="Permalink to this definition"></a></dt>
+<dd><p>This funciton indicate if there extra cameras in scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteCustomeCameras_fix">
+<span class="sig-name descname"><span class="pre">deleteCustomeCameras_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteCustomeCameras_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all cameras in scene.
+undo: available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteCustomeCameras_select">
+<span class="sig-name descname"><span class="pre">deleteCustomeCameras_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteCustomeCameras_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all camers in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteHistory_check">
+<span class="sig-name descname"><span class="pre">deleteHistory_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteHistory_check" title="Permalink to this definition"></a></dt>
+<dd><p>Notifies if there are objects with history in the scene.
+parameters are indicated in the list of projects</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – piority = args[0][0], indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(dic), { state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteHistory_fix">
+<span class="sig-name descname"><span class="pre">deleteHistory_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteHistory_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete object history.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteHistory_select">
+<span class="sig-name descname"><span class="pre">deleteHistory_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteHistory_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select the objects that have history.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups">
+<span class="sig-name descname"><span class="pre">emptyGroups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups" title="Permalink to this definition"></a></dt>
+<dd><p>This function find all the transforms nodes those not have children in they hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of empty transforms nodes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups_check">
+<span class="sig-name descname"><span class="pre">emptyGroups_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there empty transforms nodes in the scene.</p>
+<ul class="simple">
+<li><p>fix button: available (  model.emptyGroups_fix() ), undo: available.</p></li>
+<li><p>extra button: label “Sel” ( model.emptyGroups_select() )</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups_fix">
+<span class="sig-name descname"><span class="pre">emptyGroups_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all the transforms nodes those not have children in they hierarchy.
+undo: avaiable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups_select">
+<span class="sig-name descname"><span class="pre">emptyGroups_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all the transforms nodes those not have children in they hierarchy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.extensionFile_check">
+<span class="sig-name descname"><span class="pre">extensionFile_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.extensionFile_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check is the scene are save and extension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+<li><p><strong>extension</strong> – args[0][1] , Indicates the format that the scene should be.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform">
+<span class="sig-name descname"><span class="pre">freezeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform" title="Permalink to this definition"></a></dt>
+<dd><p>Looking through all transfrom nodes in scene to list the nodes with transforms diferent then translate and rotate
+(0, 0, 0) and scale ( 1,1,1).
+:Return: [ transform nodes ]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform_check">
+<span class="sig-name descname"><span class="pre">freezeTransform_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform_check" title="Permalink to this definition"></a></dt>
+<dd><p>Indicates if there are objects that are not found with freeze transformation.
+( parameters are indicated in the list of projects )</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – piority (args[0][0]), indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform_fix">
+<span class="sig-name descname"><span class="pre">freezeTransform_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Freeze object transfromations.
+freezeTransform_fix is undoable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform_select">
+<span class="sig-name descname"><span class="pre">freezeTransform_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects without freeze transformation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.getAllCams">
+<span class="sig-name descname"><span class="pre">getAllCams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.getAllCams" title="Permalink to this definition"></a></dt>
+<dd><p>Collect all camera node type in the scene , excluding the default cameras.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>camera in scene.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.getBoundingBox">
+<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.getBoundingBox" title="Permalink to this definition"></a></dt>
+<dd><p>Query bounding box for mesh in scene and idicate if they are under the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of objects idicate if the object is under grid.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tupla(bool, obj )[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.groupName_check">
+<span class="sig-name descname"><span class="pre">groupName_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.groupName_check" title="Permalink to this definition"></a></dt>
+<dd><p>This function indicates whether the containing groups are named correctly.</p>
+<p>naming covnetions:
+* First word capitalized.
+* After a underscore “_” the next string need to be uppercase.
+* Group sufix ( _GRP )</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, assetName, prefix, sufix ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+<li><p><strong>assetName</strong> – args[0][1] , asset name.</p></li>
+<li><p><strong>prefix</strong> – args[0][2] , The valid prefix for the groups if not defined the argument can be an empty string.</p></li>
+<li><p><strong>sufix</strong> – args[0][3] , Rhe valid sufix for the groups if not defined the argument can be an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.groupName_fix">
+<span class="sig-name descname"><span class="pre">groupName_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.groupName_fix" title="Permalink to this definition"></a></dt>
+<dd><p>This function fix the group names based in the defined nameing conventions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Are the defined arguments in the project list.  ( priority, assetName, prefix, sufix ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+<li><p><strong>assetName</strong> – args[0][1] , asset name.</p></li>
+<li><p><strong>prefix</strong> – args[0][2] , The valid prefix for the groups if not defined the argument can be an empty string.</p></li>
+<li><p><strong>sufix</strong> – args[0][3] , Rhe valid sufix for the groups if not defined the argument can be an empty string.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.groupName_select">
+<span class="sig-name descname"><span class="pre">groupName_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.groupName_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all groups who do not match with naming conventions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Are the defined arguments in the project list.  ( priority, assetName, prefix, sufix ).</p></li>
+<li><p><strong>assetName</strong> – args[0][1] , asset name.</p></li>
+<li><p><strong>prefix</strong> – args[0][2] , The valid prefix for the groups if not defined the argument can be an empty string.</p></li>
+<li><p><strong>sufix</strong> – args[0][3] , Rhe valid sufix for the groups if not defined the argument can be an empty string.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.groupsName">
+<span class="sig-name descname"><span class="pre">groupsName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parentNode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grpPrefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grpSufix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.groupsName" title="Permalink to this definition"></a></dt>
+<dd><p>Query all groups do not mactch naming coventions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parentNode</strong> – Indicate the paretn group the check heirarchy.</p></li>
+<li><p><strong>grpPrefix</strong> – defined group prefix.</p></li>
+<li><p><strong>grpSufix</strong> – defined group sufix.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Groups do not match naming conventions.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PyNode[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.hierarchy_check">
+<span class="sig-name descname"><span class="pre">hierarchy_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.hierarchy_check" title="Permalink to this definition"></a></dt>
+<dd><p>This function indicates if the hierarchy is correctly ordered. All nodes and groups need to be under the asset name group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.hierarchy_fix">
+<span class="sig-name descname"><span class="pre">hierarchy_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.hierarchy_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Query all DAG transforms groups and parent under main asset group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.hierarchy_select">
+<span class="sig-name descname"><span class="pre">hierarchy_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.hierarchy_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all DAG objects outside the main asset group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.laminaFace_check">
+<span class="sig-name descname"><span class="pre">laminaFace_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.laminaFace_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there <strong>laminaFace</strong> components in the scene.</p>
+<ul class="simple">
+<li><p>fix button: none.</p></li>
+<li><p>extra button: label “Sel” ( model.laminaFace_extra() )</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.laminaFace_select">
+<span class="sig-name descname"><span class="pre">laminaFace_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.laminaFace_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all “laminaFace” components in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.meshNameConvention">
+<span class="sig-name descname"><span class="pre">meshNameConvention</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedPrefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sufix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedSufix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tgtPrefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.meshNameConvention" title="Permalink to this definition"></a></dt>
+<dd><p>Check mesh node name conventions .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+<li><p><strong>prefix</strong> – args[0][1]</p></li>
+<li><p><strong>allowedPrefix</strong> – args[0][2]</p></li>
+<li><p><strong>sufix</strong> – args[0][3]</p></li>
+<li><p><strong>allowedSufix</strong> – args[0][4]</p></li>
+<li><p><strong>tgtPrefix</strong> – args[0][5]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.meshName_check">
+<span class="sig-name descname"><span class="pre">meshName_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.meshName_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.meshName_fix">
+<span class="sig-name descname"><span class="pre">meshName_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.meshName_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.meshName_select">
+<span class="sig-name descname"><span class="pre">meshName_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.meshName_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.meshPrefix">
+<span class="sig-name descname"><span class="pre">meshPrefix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'GEO_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowedPrefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tgtPrefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.meshPrefix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.meshUpperCase">
+<span class="sig-name descname"><span class="pre">meshUpperCase</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.meshUpperCase" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.meshUpperCase_fix">
+<span class="sig-name descname"><span class="pre">meshUpperCase_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.meshUpperCase_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons">
+<span class="sig-name descname"><span class="pre">nGons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons" title="Permalink to this definition"></a></dt>
+<dd><p>search in all objects faces that are nGons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retrun</dt>
+<dd class="field-odd"><p>nGons face list.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons_check">
+<span class="sig-name descname"><span class="pre">nGons_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there <strong>nGons</strong> face components in the scene.</p>
+<ul class="simple">
+<li><p>fix button: available (  model.nGons_fix() ), undo: available.</p></li>
+<li><p>extra button: label “Sel” ( model.nGons_extra() )</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons_fix">
+<span class="sig-name descname"><span class="pre">nGons_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Trangulate all nGons faces in scene.</p>
+<p>undo: available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons_select">
+<span class="sig-name descname"><span class="pre">nGons_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all nGons mesh components in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCenterPvtNodes">
+<span class="sig-name descname"><span class="pre">noCenterPvtNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCenterPvtNodes" title="Permalink to this definition"></a></dt>
+<dd><p>The noCenterPvtNodes command returns the objects without center pivote in the scene.
+:return: string[]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCurves_check">
+<span class="sig-name descname"><span class="pre">noCurves_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCurves_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check if exists nurbsCurve type node in scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCurves_fix">
+<span class="sig-name descname"><span class="pre">noCurves_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCurves_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete nurbsCurve node type in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCurves_select">
+<span class="sig-name descname"><span class="pre">noCurves_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCurves_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select nurbsCUrve node type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalNames_check">
+<span class="sig-name descname"><span class="pre">noIdenticalNames_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalNames_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there no identical names per transform nodes in scene.</p>
+<ul class="simple">
+<li><p>fix button: none.</p></li>
+<li><p>extra button: label “Sel” ( model.noIdenticalNames_select() )</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalNames_select">
+<span class="sig-name descname"><span class="pre">noIdenticalNames_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalNames_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select transfrom nodes with no identical name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames" title="Permalink to this definition"></a></dt>
+<dd><p>Compare shape name with parent transform name if the shape name is no equal as transform plus “Shape” sufix
+returns a list with the shape.
+:returns: No match shape names.
+:rtype: string[]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames_check">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there no match between transforms nodes name and shape name.</p>
+<ul class="simple">
+<li><p>fix button: available (  model.noIdenticalShapeNames_fix() ), undo: available.</p></li>
+<li><p>extra button: label “Sel” ( model.noIdenticalShapeNames_select() )</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames_fix">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Rename the shapes whose doesn’t match with transform name.
+undo: avaiable.</p>
+<ul class="simple">
+<li><p>example: nt.transform( <em>GEO_body</em> ), incorrect: nt.mesh( <em>GEO_body_upper_shape</em> ) correct: nt.mesh( <em>GEO_bodyShape</em> )</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames_select">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects whose shape name doesn’t match with transform name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noKeyframes_check">
+<span class="sig-name descname"><span class="pre">noKeyframes_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noKeyframes_check" title="Permalink to this definition"></a></dt>
+<dd><p>This function indicate if there keyframes in the scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noKeyframes_fix">
+<span class="sig-name descname"><span class="pre">noKeyframes_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noKeyframes_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all ‘animCurve’ nodes.
+:args: none</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noKeyframes_select">
+<span class="sig-name descname"><span class="pre">noKeyframes_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noKeyframes_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects with keyframes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noLayers_check">
+<span class="sig-name descname"><span class="pre">noLayers_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noLayers_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check if exists display layers in scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noLayers_fix">
+<span class="sig-name descname"><span class="pre">noLayers_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noLayers_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete exists display layers in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noQuads">
+<span class="sig-name descname"><span class="pre">noQuads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noQuads" title="Permalink to this definition"></a></dt>
+<dd><p>noQuads function select all mesh type in scene and look for faces that not have 4 sides</p>
+<dl class="field-list simple">
+<dt class="field-odd">Retrun</dt>
+<dd class="field-odd"><p>No quads face list.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nonManifoldGeo">
+<span class="sig-name descname"><span class="pre">nonManifoldGeo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nonManifoldGeo" title="Permalink to this definition"></a></dt>
+<dd><p>This command find all <strong>nonManifold</strong> component in the scene.
+:return: List with face compoents.
+:rtype: string[]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nonManifoldGeo_check">
+<span class="sig-name descname"><span class="pre">nonManifoldGeo_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nonManifoldGeo_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there <strong>nonManifold</strong> face components in the scene.</p>
+<ul class="simple">
+<li><p>fix button: none.</p></li>
+<li><p>extra button: label “Sel” ( model.nonManifoldGeo_extra() )</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nonManifoldGeo_select">
+<span class="sig-name descname"><span class="pre">nonManifoldGeo_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nonManifoldGeo_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all nonManifold faces component in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.objectsWhitHistory">
+<span class="sig-name descname"><span class="pre">objectsWhitHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">allowNodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.objectsWhitHistory" title="Permalink to this definition"></a></dt>
+<dd><p>List all dag objects in scene and filter by if have construction history .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>allowNodes</strong> – type of nodes that are allowed in construction history, defined in the project configuration filters.</p>
+</dd>
+</dl>
+<p>return: list of tranform objects.
+:rtype: string[]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.objectsintersectionAxis">
+<span class="sig-name descname"><span class="pre">objectsintersectionAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'x'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.objectsintersectionAxis" title="Permalink to this definition"></a></dt>
+<dd><p>Query all object whose mesh shape are intersected by defined axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axis</strong> – (str) indicates the axis ( x, y, z).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>all shapes intersected by defined axis.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.onAboveOrigin_check">
+<span class="sig-name descname"><span class="pre">onAboveOrigin_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.onAboveOrigin_check" title="Permalink to this definition"></a></dt>
+<dd><p>This function indicates if there objects under the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.onAboveOrigin_select">
+<span class="sig-name descname"><span class="pre">onAboveOrigin_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.onAboveOrigin_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects who mesh or fraction of the mesh are under the grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.orientation_check">
+<span class="sig-name descname"><span class="pre">orientation_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.orientation_check" title="Permalink to this definition"></a></dt>
+<dd><p>This function indicates if there objects in scene dose not match the defined orientation .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , indicate if the check must be critical or warning.</p></li>
+<li><p><strong>orientation</strong> – Defined on the project list , ( XYZ = (1,1,1) Yup zFront )</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.orientation_select">
+<span class="sig-name descname"><span class="pre">orientation_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.orientation_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects in scene dose not match the defined orientation .</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.queryAssetGrpChildren">
+<span class="sig-name descname"><span class="pre">queryAssetGrpChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parentNode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.queryAssetGrpChildren" title="Permalink to this definition"></a></dt>
+<dd><p>Query all children hierarchy transforms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parentNode</strong> – Indicate the paretn group the check heirarchy.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>object list</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PyNode[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.queryTransformsOrientation">
+<span class="sig-name descname"><span class="pre">queryTransformsOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.queryTransformsOrientation" title="Permalink to this definition"></a></dt>
+<dd><p>finds objects that do not match the defined orientation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>orientation</strong> – Defined on the project list , ( XYZ = (1,1,1) Yup zFront )</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of objest does not match the orientation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.repeatNames">
+<span class="sig-name descname"><span class="pre">repeatNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.repeatNames" title="Permalink to this definition"></a></dt>
+<dd><p>This function compare all transfroms nodes names and flag the repeat ones.
+:retunr: Transforms nodes with repeat names.
+:rtype: string[]</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.resetTransformsOrigin_check">
+<span class="sig-name descname"><span class="pre">resetTransformsOrigin_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.resetTransformsOrigin_check" title="Permalink to this definition"></a></dt>
+<dd><p>This command indicate if there objects with no world center pivot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – ( args[0][0] ) piority, indicate if the check must be critical or warning.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.resetTransformsOrigin_fix">
+<span class="sig-name descname"><span class="pre">resetTransformsOrigin_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.resetTransformsOrigin_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Center pivot for all objects in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.resetTransformsOrigin_select">
+<span class="sig-name descname"><span class="pre">resetTransformsOrigin_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.resetTransformsOrigin_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects without world center pivot.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.symmetry_check">
+<span class="sig-name descname"><span class="pre">symmetry_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.symmetry_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.symmetry_select">
+<span class="sig-name descname"><span class="pre">symmetry_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.symmetry_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select the no symetrical objects in defined axis intersection.
+The axis is defined in the parameters of the check list. ( X axis as defalut )</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.targetMeshPrefix_fix">
+<span class="sig-name descname"><span class="pre">targetMeshPrefix_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bsGrp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Blendshapes_GRP'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'GEO_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tgtPrefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TGT_'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.targetMeshPrefix_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.unknowNodes_check">
+<span class="sig-name descname"><span class="pre">unknowNodes_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.unknowNodes_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check for unknown nodes in scene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>args</strong> – Arguments defined in the project list.  ( priority, orientation ).</p></li>
+<li><p><strong>priority</strong> – args[0][0] , Indicate if the check must be critical or warning.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dic{ state: int, note: str, fixBtn: bool, extraBtn: [ bool, stg ] }</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.unknowNodes_fix">
+<span class="sig-name descname"><span class="pre">unknowNodes_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.unknowNodes_fix" title="Permalink to this definition"></a></dt>
+<dd><p>This function delete all unknow nodes in scene.
+undo: available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.unknowNodes_select">
+<span class="sig-name descname"><span class="pre">unknowNodes_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.unknowNodes_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select all unknow nodes in scene.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.projectlist">
+<span id="checker-projectlist-module"></span><h2>checker.projectlist module<a class="headerlink" href="#module-checker.projectlist" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="checker.projectlist.projectFilters">
+<span class="sig-prename descclassname"><span class="pre">checker.projectlist.</span></span><span class="sig-name descname"><span class="pre">projectFilters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Model'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assetName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'assetName'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.projectlist.projectFilters" title="Permalink to this definition"></a></dt>
+<dd><p>In this function checker are assigned for each project,
+assigning the “step” as a key an as a value : ( checkers name , priority level , args )</p>
+<p>Modeling checker:
+‘constructionHistory’ , ‘resetTransformsOrigin’ , ‘freezeTransform’ , ‘symmetry’ , ‘allQuads’ ,
+‘nGons’ , ‘nonManifoldGeometry’ , ‘laminaFaces’ , ‘emptyGroups’ , ‘noIdenticalNames’ , ‘noIdenticalShapeNames’ ,
+‘hierarchy’ , ‘orientation’ , ‘onAboveOrigin’ , ‘deleteCustomCameras’ , ‘noKeyframes’, ‘noLayers’ , ‘noCurves’ ,
+‘extensionFile’ , ‘unknowNodes’</p>
+<p>LookDev checker:
+‘clearDeformers’, ‘blendShape’, ‘delNonDeformHistory’, ‘flagGeoWithTransform’, ‘flagObjWithDeformHistory’,
+‘uvSetName’, ‘multipleUVSet’, ‘materialPrefix’, ‘defaultMaterialType’, ‘deleteUnusedNode’, ‘noKeyframes’,
+‘faceWithoutMaterial’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Checker</dt>
+<dd class="field-odd"><p>key name for the check method.</p>
+</dd>
+<dt class="field-even">Priority</dt>
+<dd class="field-even"><p>1 = critical must have to be correct, 2 = warning.</p>
+</dd>
+<dt class="field-odd">Args</dt>
+<dd class="field-odd"><p>additional arguments needed by the checker.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>project</strong> – project name.</p></li>
+<li><p><strong>step</strong> – step name (model , surfacing, layout)</p></li>
+<li><p><strong>assetName</strong> – asset name form the assigned task.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[ checkers (str), priority (int), args ]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-checker.ui">
+<span id="checker-ui-module"></span><h2>checker.ui module<a class="headerlink" href="#module-checker.ui" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.ui.</span></span><span class="sig-name descname"><span class="pre">CheckerUI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.CheckerUI" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QDialog</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI.addFixBtn">
+<span class="sig-name descname"><span class="pre">addFixBtn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkName=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkSufix=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label=''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.CheckerUI.addFixBtn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI.checkAll">
+<span class="sig-name descname"><span class="pre">checkAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.CheckerUI.checkAll" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI.checkBtn">
+<span class="sig-name descname"><span class="pre">checkBtn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.CheckerUI.checkBtn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI.dotCheck">
+<span class="sig-name descname"><span class="pre">dotCheck</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.CheckerUI.dotCheck" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI.getArgs">
+<span class="sig-name descname"><span class="pre">getArgs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.CheckerUI.getArgs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#checker.ui.CheckerUI.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.ui.CheckerUI.updateFilters">
+<span class="sig-name descname"><span class="pre">updateFilters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.CheckerUI.updateFilters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="checker.ui.ledColor">
+<span class="sig-prename descclassname"><span class="pre">checker.ui.</span></span><span class="sig-name descname"><span class="pre">ledColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.ledColor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="checker.ui.setNote">
+<span class="sig-prename descclassname"><span class="pre">checker.ui.</span></span><span class="sig-name descname"><span class="pre">setNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">note=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.ui.setNote" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-checker">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-checker" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="checker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steamroller.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

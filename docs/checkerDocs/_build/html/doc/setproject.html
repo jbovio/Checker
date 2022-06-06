@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Set new project &mdash; Checker 1.0.00 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Checker list" href="existschecker.html" />
+    <link rel="prev" title="Welcome to Checker’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Checker
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Set new project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setps">Setps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="existschecker.html">Checker list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modelchecker.html">Model checker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userinterface.html">Graphic interface</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">checker</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Checker</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Set new project</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/doc/setproject.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="set-new-project">
+<span id="setnewproject"></span><h1>Set new project<a class="headerlink" href="#set-new-project" title="Permalink to this headline"></a></h1>
+<section id="setps">
+<h2>Setps<a class="headerlink" href="#setps" title="Permalink to this headline"></a></h2>
+<ol class="arabic simple">
+<li><p>open ../lib/projectlist.py</p></li>
+</ol>
+<p>2. Inside projectlist.py there is a function called “projectFilters” in order to
+set a new project required add a new key in projectFilter dictionary and indicate
+the check functions per step and project.
+3. e.g. {projectName: { step: check function }, { step2: check funtion }}
+4. Some funtions required specific parameters can be set in the key value.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">projectFilter</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;default&#39;</span> <span class="p">:</span>
+                <span class="p">{</span> <span class="s1">&#39;model&#39;</span> <span class="p">:</span>
+                  <span class="p">[</span>
+                  <span class="p">(</span> <span class="s1">&#39;constructionHistory&#39;</span>   <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="p">[</span> <span class="s1">&#39;groupId&#39;</span><span class="p">,</span> <span class="s1">&#39;shadingEngine&#39;</span> <span class="p">]</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;resetTransformsOrigin&#39;</span> <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;freezeTransform&#39;</span>       <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;symmetry&#39;</span>              <span class="p">,</span> <span class="mi">2</span> <span class="p">,</span> <span class="s1">&#39;x&#39;</span> <span class="p">),</span> <span class="c1"># X axis symmetry ( world space )</span>
+                  <span class="p">(</span> <span class="s1">&#39;allQuads&#39;</span>              <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;nGons&#39;</span>                 <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;nonManifoldGeometry&#39;</span>   <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;laminaFaces&#39;</span>           <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;emptyGroups&#39;</span>           <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;hierarchy&#39;</span>             <span class="p">,</span> <span class="mi">1</span>  <span class="p">,</span> <span class="n">assetName</span> <span class="p">),</span>      <span class="c1"># need current asset name.</span>
+                  <span class="p">(</span> <span class="s1">&#39;noIdenticalNames&#39;</span>      <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;groupName&#39;</span>             <span class="p">,</span> <span class="mi">1</span>  <span class="p">,</span> <span class="p">(</span> <span class="n">assetName</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;_GRP&#39;</span> <span class="p">)</span> <span class="p">),</span> <span class="c1"># ( assetName, prefix, sufix )</span>
+                  <span class="p">(</span> <span class="s1">&#39;meshName&#39;</span>              <span class="p">,</span> <span class="mi">1</span>  <span class="p">,</span> <span class="n">assetName</span><span class="p">,</span>   <span class="n">default_meshName_convention</span> <span class="p">),</span> <span class="c1"># ( assetName, dict,  )</span>
+                  <span class="p">(</span> <span class="s1">&#39;noIdenticalShapeNames&#39;</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;orientation&#39;</span>           <span class="p">,</span> <span class="mi">1</span>  <span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">),</span>      <span class="c1"># XYZ 1,1,1 = Yup Z front.</span>
+                  <span class="p">(</span> <span class="s1">&#39;onAboveOrigin&#39;</span>         <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;deleteCustomeCameras&#39;</span>  <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;noKeyframes&#39;</span>           <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;noLayers&#39;</span>              <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;noCurves&#39;</span>              <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;extensionFile&#39;</span>         <span class="p">,</span> <span class="mi">1</span>  <span class="p">,</span> <span class="s1">&#39;ma&#39;</span> <span class="p">),</span>
+                  <span class="p">(</span> <span class="s1">&#39;unknowNodes&#39;</span>           <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                  <span class="p">],</span>
+
+                <span class="s1">&#39;lookDev&#39;</span><span class="p">:</span>
+                <span class="p">[</span>
+                <span class="p">(</span> <span class="s1">&#39;clearDeformers&#39;</span>          <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="p">[</span> <span class="s1">&#39;blendShape&#39;</span> <span class="p">]</span> <span class="p">),</span> <span class="c1"># Deformers to clean</span>
+                <span class="p">(</span> <span class="s1">&#39;delNonDeformHistory&#39;</span>     <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;flagGeoWithTransform&#39;</span>    <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;flagObjWithDeformHistory&#39;</span><span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;uvSetName&#39;</span>               <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;multipleUVSet&#39;</span>           <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;materialPrefix&#39;</span>          <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="s1">&#39;Mat_&#39;</span><span class="p">),</span> <span class="c1"># Material prefix</span>
+                <span class="p">(</span> <span class="s1">&#39;defaultMaterialType&#39;</span>     <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="s1">&#39;lambert&#39;</span> <span class="p">),</span> <span class="c1"># Set default material type</span>
+                <span class="p">(</span> <span class="s1">&#39;deleteUnusedNode&#39;</span>        <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;noKeyframes&#39;</span>             <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;faceWithoutMaterial&#39;</span>     <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                <span class="p">],</span>
+
+                <span class="s1">&#39;layout&#39;</span><span class="p">:</span>
+                <span class="p">[</span>
+                <span class="p">(</span> <span class="s1">&#39;cleanConstraints&#39;</span>        <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                <span class="p">],</span>
+
+                <span class="s1">&#39;animation&#39;</span><span class="p">:</span>
+                <span class="p">[</span>
+                <span class="p">(</span> <span class="s1">&#39;cleanLights&#39;</span>             <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="kc">True</span> <span class="p">),</span> <span class="c1"># Priority , omit Namespace bool</span>
+                <span class="p">(</span> <span class="s1">&#39;noLayers&#39;</span>                <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;animLayer&#39;</span>               <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;defaultRotationOrder&#39;</span>    <span class="p">,</span> <span class="mi">2</span> <span class="p">,</span> <span class="p">(</span> <span class="s1">&#39;tag&#39;</span><span class="p">,</span> <span class="s1">&#39;_prefix&#39;</span><span class="p">,</span> <span class="s1">&#39;_ctrl&#39;</span><span class="p">,</span> <span class="s1">&#39;attr&#39;</span> <span class="p">)</span> <span class="p">),</span> <span class="c1"># ( filter type, prefix, sufix, attrData )</span>
+                <span class="p">(</span> <span class="s1">&#39;auido&#39;</span>                   <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;deleteCustomeCameras&#39;</span>    <span class="p">,</span> <span class="mi">1</span> <span class="p">),</span>
+                <span class="p">(</span> <span class="s1">&#39;junkNodesAnim&#39;</span>           <span class="p">,</span> <span class="mi">2</span> <span class="p">),</span>
+                <span class="p">]</span>
+
+                <span class="p">},</span>
+              <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Checker’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="existschecker.html" class="btn btn-neutral float-right" title="Checker list" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steamroller.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

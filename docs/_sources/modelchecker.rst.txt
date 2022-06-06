@@ -1,0 +1,26 @@
+Model checker
+==============
+
+Construction history
+---------------------
+
+( **code**: *checker.model.deleteHistory_check* )
+
+* Check: Verifies that the geometries in the scene do not contain history.
+* Sel: Select all geometries with construction history.
+* Fix: Delete construction history for all geometries nodes.
+
+
+.. figure:: /images/constructionHistory.gif
+   :align: center
+   :scale: 100 %
+
+   *Construction history.*
+
+
+Reset transform
+----------------
+
+* Check: Verifies if all pivots are at the origin.
+* Fix: Center all transform nodes pivots to the origin.
+* Sel: Select all transform nodes do not have the pivot at the origin.

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>checker package &mdash; Checker 1.0.00 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="checker" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Checker
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="userguide.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userinterface.html">Checker user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="registerproject.html">Add projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modelchecker.html">Model checker</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">checker</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">checker package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.addnewbutton">addnewbutton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.checkbutton">checker.checkbutton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.checker">checker.checker module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.launcher">checker.launcher module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.lookdev">checker.lookdev module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.model">checker.model module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker.projectlist">checker.projectlist module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checker-ui-module">checker.ui module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-checker">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Checker</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">checker</a> &raquo;</li>
+      <li>checker package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/checker.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="checker-package">
+<h1>checker package<a class="headerlink" href="#checker-package" title="Permalink to this headline"></a></h1>
+<section id="module-checker.addnewbutton">
+<span id="addnewbutton-module"></span><h2>addnewbutton module<a class="headerlink" href="#module-checker.addnewbutton" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.addnewbutton.AddBtn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.addnewbutton.</span></span><span class="sig-name descname"><span class="pre">AddBtn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.addnewbutton.AddBtn" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QPushButton</span></code></p>
+<p>This class is to create buttons that execute the different functions that exist in the checker class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.addnewbutton.AddBtn.btnFunction">
+<span class="sig-name descname"><span class="pre">btnFunction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.addnewbutton.AddBtn.btnFunction" title="Permalink to this definition"></a></dt>
+<dd><p>Execute the checker function based on id_str key name and pass arguemtns.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="checker.addnewbutton.AddBtn.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#checker.addnewbutton.AddBtn.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.checkbutton">
+<span id="checker-checkbutton-module"></span><h2>checker.checkbutton module<a class="headerlink" href="#module-checker.checkbutton" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.checkbutton.</span></span><span class="sig-name descname"><span class="pre">ItemWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id_str</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mainTable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.addFixBtn">
+<span class="sig-name descname"><span class="pre">addFixBtn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkSufix=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label=''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.addFixBtn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.assigneCheck">
+<span class="sig-name descname"><span class="pre">assigneCheck</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.assigneCheck" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.getChecker">
+<span class="sig-name descname"><span class="pre">getChecker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.getChecker" title="Permalink to this definition"></a></dt>
+<dd><p>Query checker key name from main table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>row</strong> – [int], row index from main table.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[ checker key name from main table column 0 ]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.getRow">
+<span class="sig-name descname"><span class="pre">getRow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.getRow" title="Permalink to this definition"></a></dt>
+<dd><p>Query table row by text.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.ledColor">
+<span class="sig-name descname"><span class="pre">ledColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">status=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.ledColor" title="Permalink to this definition"></a></dt>
+<dd><p>Set color code icon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> – (int) 1 green ok, 2 red error, 3 orange warning</p></li>
+<li><p><strong>row</strong> – (int) row index.</p></li>
+<li><p><strong>table</strong> – QtableWidget.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.remvoeExtraButtons">
+<span class="sig-name descname"><span class="pre">remvoeExtraButtons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.remvoeExtraButtons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.runChecker">
+<span class="sig-name descname"><span class="pre">runChecker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkerName=''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.runChecker" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.setNote">
+<span class="sig-name descname"><span class="pre">setNote</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">note=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table=None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checkbutton.ItemWidget.setNote" title="Permalink to this definition"></a></dt>
+<dd><p>Set table note</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>note</strong> – (str) text note to display in interface column.</p></li>
+<li><p><strong>row</strong> – (int) row index.</p></li>
+<li><p><strong>table</strong> – QtableWidget.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="checker.checkbutton.ItemWidget.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#checker.checkbutton.ItemWidget.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.checker">
+<span id="checker-checker-module"></span><h2>checker.checker module<a class="headerlink" href="#module-checker.checker" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.checker.Checker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.checker.</span></span><span class="sig-name descname"><span class="pre">Checker</span></span><a class="headerlink" href="#checker.checker.Checker" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checker.Checker.checkList">
+<span class="sig-name descname"><span class="pre">checkList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checker.Checker.checkList" title="Permalink to this definition"></a></dt>
+<dd><p>Contains a checker dictonary by department.</p>
+<dl class="simple">
+<dt>sufix “_check”: Refers to the method who return the results(Dic)</dt><dd><p>results = {‘state’: None, ‘note’: note, ‘fixBtn’: None, ‘extraBtn’: None }</p>
+</dd>
+</dl>
+<p>sufix “_fix”: Refers to the method that corrects the error.</p>
+<p>sufix “_extra”: Refers to the exclusive method for the checker.</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">state</dt>
+<dd class="field-odd"><p>(int)  1 True , 2 False, 3 Warning.</p>
+</dd>
+<dt class="field-even">note</dt>
+<dd class="field-even"><p>(str) Description, commnet, general information to display in UI column.</p>
+</dd>
+<dt class="field-odd">fixBtn</dt>
+<dd class="field-odd"><p>(bool) Method to correct the error.</p>
+</dd>
+<dt class="field-even">extraBtn</dt>
+<dd class="field-even"><p>( [ bool, str ] ) [ Add an extra function if the method returns false, button lable ]</p>
+</dd>
+</dl>
+<p># Checker example.
+‘keyName’ : ‘keyName_check’,  # Actual checker
+‘keyName_fix’ : ‘keyName_fix’, # Solution
+‘keyName_extra’ : ‘keyName_select’, # Select checked nodes</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>check</strong> – (str) key name to idicate the method.</p></li>
+<li><p><strong>args</strong> – project-specific arguments</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.checker.Checker.null">
+<span class="sig-name descname"><span class="pre">null</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.checker.Checker.null" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.launcher">
+<span id="checker-launcher-module"></span><h2>checker.launcher module<a class="headerlink" href="#module-checker.launcher" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-checker.lookdev">
+<span id="checker-lookdev-module"></span><h2>checker.lookdev module<a class="headerlink" href="#module-checker.lookdev" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.lookdev.</span></span><span class="sig-name descname"><span class="pre">Lookdev</span></span><a class="headerlink" href="#checker.lookdev.Lookdev" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.lookdev.Lookdev.shaderTest_check">
+<span class="sig-name descname"><span class="pre">shaderTest_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.lookdev.Lookdev.shaderTest_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.model">
+<span id="checker-model-module"></span><h2>checker.model module<a class="headerlink" href="#module-checker.model" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="checker.model.Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">checker.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#checker.model.Model" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.allQuads_check">
+<span class="sig-name descname"><span class="pre">allQuads_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.allQuads_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.allQuads_select">
+<span class="sig-name descname"><span class="pre">allQuads_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.allQuads_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.assemblyHierarchy">
+<span class="sig-name descname"><span class="pre">assemblyHierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assetName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.assemblyHierarchy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.assetGroup">
+<span class="sig-name descname"><span class="pre">assetGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">assetName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sufix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'_GRP'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.assetGroup" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteCustomCameras_check">
+<span class="sig-name descname"><span class="pre">deleteCustomCameras_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteCustomCameras_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteCustomCameras_fix">
+<span class="sig-name descname"><span class="pre">deleteCustomCameras_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteCustomCameras_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteCustomCameras_select">
+<span class="sig-name descname"><span class="pre">deleteCustomCameras_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteCustomCameras_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteHistory_check">
+<span class="sig-name descname"><span class="pre">deleteHistory_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteHistory_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteHistory_fix">
+<span class="sig-name descname"><span class="pre">deleteHistory_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteHistory_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.deleteHistory_select">
+<span class="sig-name descname"><span class="pre">deleteHistory_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.deleteHistory_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups">
+<span class="sig-name descname"><span class="pre">emptyGroups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups_check">
+<span class="sig-name descname"><span class="pre">emptyGroups_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups_fix">
+<span class="sig-name descname"><span class="pre">emptyGroups_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.emptyGroups_select">
+<span class="sig-name descname"><span class="pre">emptyGroups_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.emptyGroups_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.extensionFile_check">
+<span class="sig-name descname"><span class="pre">extensionFile_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.extensionFile_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform">
+<span class="sig-name descname"><span class="pre">freezeTransform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform_check">
+<span class="sig-name descname"><span class="pre">freezeTransform_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform_fix">
+<span class="sig-name descname"><span class="pre">freezeTransform_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.freezeTransform_select">
+<span class="sig-name descname"><span class="pre">freezeTransform_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.freezeTransform_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.getAllCams">
+<span class="sig-name descname"><span class="pre">getAllCams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.getAllCams" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.getBoundingBox">
+<span class="sig-name descname"><span class="pre">getBoundingBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.getBoundingBox" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.hierarchy_check">
+<span class="sig-name descname"><span class="pre">hierarchy_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.hierarchy_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.hierarchy_fix">
+<span class="sig-name descname"><span class="pre">hierarchy_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.hierarchy_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.hierarchy_select">
+<span class="sig-name descname"><span class="pre">hierarchy_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.hierarchy_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.laminaFace_check">
+<span class="sig-name descname"><span class="pre">laminaFace_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.laminaFace_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.laminaFace_select">
+<span class="sig-name descname"><span class="pre">laminaFace_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.laminaFace_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons">
+<span class="sig-name descname"><span class="pre">nGons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons_check">
+<span class="sig-name descname"><span class="pre">nGons_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons_fix">
+<span class="sig-name descname"><span class="pre">nGons_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nGons_select">
+<span class="sig-name descname"><span class="pre">nGons_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nGons_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCenterPvtNodes">
+<span class="sig-name descname"><span class="pre">noCenterPvtNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCenterPvtNodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCurves_check">
+<span class="sig-name descname"><span class="pre">noCurves_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCurves_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCurves_fix">
+<span class="sig-name descname"><span class="pre">noCurves_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCurves_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noCurves_select">
+<span class="sig-name descname"><span class="pre">noCurves_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noCurves_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalNames_check">
+<span class="sig-name descname"><span class="pre">noIdenticalNames_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalNames_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalNames_select">
+<span class="sig-name descname"><span class="pre">noIdenticalNames_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalNames_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames_check">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames_fix">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noIdenticalShapeNames_select">
+<span class="sig-name descname"><span class="pre">noIdenticalShapeNames_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noIdenticalShapeNames_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noKeyframes_check">
+<span class="sig-name descname"><span class="pre">noKeyframes_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noKeyframes_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noKeyframes_fix">
+<span class="sig-name descname"><span class="pre">noKeyframes_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noKeyframes_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete all ‘animCurve’ nodes.
+:args: none</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noKeyframes_select">
+<span class="sig-name descname"><span class="pre">noKeyframes_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noKeyframes_select" title="Permalink to this definition"></a></dt>
+<dd><p>Select objects with keyframes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noLayers_check">
+<span class="sig-name descname"><span class="pre">noLayers_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noLayers_check" title="Permalink to this definition"></a></dt>
+<dd><p>Check if exists display layers in scene.
+:priority: ( args[0][0] ) ( int ) priority level: 1 critical, 2 warning</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noLayers_fix">
+<span class="sig-name descname"><span class="pre">noLayers_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noLayers_fix" title="Permalink to this definition"></a></dt>
+<dd><p>Delete exists display layers in scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.noQuads">
+<span class="sig-name descname"><span class="pre">noQuads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.noQuads" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nonManifoldGeo">
+<span class="sig-name descname"><span class="pre">nonManifoldGeo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nonManifoldGeo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nonManifoldGeo_check">
+<span class="sig-name descname"><span class="pre">nonManifoldGeo_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">priority=&lt;class</span> <span class="pre">'int'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nonManifoldGeo_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.nonManifoldGeo_select">
+<span class="sig-name descname"><span class="pre">nonManifoldGeo_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.nonManifoldGeo_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.objectsWhitHistory">
+<span class="sig-name descname"><span class="pre">objectsWhitHistory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.objectsWhitHistory" title="Permalink to this definition"></a></dt>
+<dd><p>List all dag objects in scene and filter by if have construction history .
+return: list of tranform objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.objectsintersectionAxis">
+<span class="sig-name descname"><span class="pre">objectsintersectionAxis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'x'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.objectsintersectionAxis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.onAboveOrigin_check">
+<span class="sig-name descname"><span class="pre">onAboveOrigin_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.onAboveOrigin_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.onAboveOrigin_select">
+<span class="sig-name descname"><span class="pre">onAboveOrigin_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.onAboveOrigin_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.orientation_check">
+<span class="sig-name descname"><span class="pre">orientation_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.orientation_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.orientation_select">
+<span class="sig-name descname"><span class="pre">orientation_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.orientation_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.queryTransformsOrientation">
+<span class="sig-name descname"><span class="pre">queryTransformsOrientation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.queryTransformsOrientation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.repeatNames">
+<span class="sig-name descname"><span class="pre">repeatNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.repeatNames" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.resetTransformsOrigin_check">
+<span class="sig-name descname"><span class="pre">resetTransformsOrigin_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.resetTransformsOrigin_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.resetTransformsOrigin_fix">
+<span class="sig-name descname"><span class="pre">resetTransformsOrigin_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.resetTransformsOrigin_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.resetTransformsOrigin_select">
+<span class="sig-name descname"><span class="pre">resetTransformsOrigin_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.resetTransformsOrigin_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.symmetry_check">
+<span class="sig-name descname"><span class="pre">symmetry_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.symmetry_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.symmetry_select">
+<span class="sig-name descname"><span class="pre">symmetry_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.symmetry_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.unknowNodes_check">
+<span class="sig-name descname"><span class="pre">unknowNodes_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.unknowNodes_check" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.unknowNodes_fix">
+<span class="sig-name descname"><span class="pre">unknowNodes_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.unknowNodes_fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="checker.model.Model.unknowNodes_select">
+<span class="sig-name descname"><span class="pre">unknowNodes_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.model.Model.unknowNodes_select" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-checker.projectlist">
+<span id="checker-projectlist-module"></span><h2>checker.projectlist module<a class="headerlink" href="#module-checker.projectlist" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="checker.projectlist.projectFilters">
+<span class="sig-prename descclassname"><span class="pre">checker.projectlist.</span></span><span class="sig-name descname"><span class="pre">projectFilters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Model'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assetName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'assetName'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#checker.projectlist.projectFilters" title="Permalink to this definition"></a></dt>
+<dd><p>In this function checker are assigned for each project,
+assigning the “step” as a key an as a value : ( checkers name , priority level , args )</p>
+<p>Available checker:
+- Model -
+‘constructionHistory’ , ‘resetTransformsOrigin’ , ‘freezeTransform’ , ‘symmetry’ , ‘allQuads’ ,
+‘nGons’ , ‘nonManifoldGeometry’ , ‘laminaFaces’ , ‘emptyGroups’ , ‘noIdenticalNames’ , ‘noIdenticalShapeNames’ ,
+‘hierarchy’ , ‘orientation’ , ‘onAboveOrigin’ , ‘deleteCustomCameras’ , ‘noKeyframes’, ‘noLayers’ , ‘noCurves’ ,
+‘extensionFile’ , ‘unknowNodes’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Checker</dt>
+<dd class="field-odd"><p>key name for the check method.</p>
+</dd>
+<dt class="field-even">Priority</dt>
+<dd class="field-even"><p>1 = critical must have to be correct, 2 = warning.</p>
+</dd>
+<dt class="field-odd">Args</dt>
+<dd class="field-odd"><p>additional arguments needed by the checker.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>project</strong> – project name.</p></li>
+<li><p><strong>step</strong> – step name (model , surfacing, layout)</p></li>
+<li><p><strong>assetName</strong> – asset name form the assigned task.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[ checkers (str), priority (int), args ]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="checker-ui-module">
+<h2>checker.ui module<a class="headerlink" href="#checker-ui-module" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-checker">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-checker" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="checker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Steamroller.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

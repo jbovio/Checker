@@ -1,0 +1,22 @@
+.. _linkInterface:
+
+Checker user interface
+=======================
+
+buttons
+---------
+* Check.
+* Check all.
+* Fix.
+* Select.
+
+
+Interface
+----------
+
+.. figure:: /images/ui.png
+   :alt: alt text
+   :align: center
+   :scale: 90 %
+
+   *Cheker interface.*

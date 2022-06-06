@@ -1,0 +1,37 @@
+.. Checker documentation master file, created by
+   sphinx-quickstart on Tue Jan 25 14:53:00 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Checker's documentation!
+===================================
+
+Welcome to the complete guide, If you're looking to understand the checker tool then you've come to the right place.
+
+**What can you find in this guide?**
+
+* User guide.
+* User :ref:`Intreface <linkInterface>`
+* How to register new projects and edit exist ones.
+* Model checker.
+* LookDev checker.
+* Code documentation.
+* Remember this tool is constantly changing, we try to do our best to keep this documentation updated. ( thanks for your understanding )
+
+
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User guide
+
+   userguide
+   userinterface
+   registerproject
+   modelchecker
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Code
+
+   modules
